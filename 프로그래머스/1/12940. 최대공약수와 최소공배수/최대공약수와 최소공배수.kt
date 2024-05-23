@@ -4,19 +4,11 @@ class Solution {
         var co = if(n > m) n else m
         
         // 최대 공약수
-        if(n > m) {
-            for(i in n downTo 1){
-                if(n % i == 0 && m % i == 0){
-                    answer += i
-                    break
-                }
-            }
-        } else {
-            for(i in m downTo 1){
-                if(n % i == 0 && m % i == 0){
-                    answer += i
-                    break
-                }
+        
+        for(i in n downTo 1){
+            if(n % i == 0 && m % i == 0){
+                answer += i
+                break
             }
         }
         
