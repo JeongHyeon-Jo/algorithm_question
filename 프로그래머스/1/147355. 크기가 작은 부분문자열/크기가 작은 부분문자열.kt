@@ -8,7 +8,7 @@ class Solution {
         for(i in 0 .. (t.length-1)){
             tlong = t.subSequence(i, i+p.length).toString().toLong()
             if(tlong <= plong) { ++count }
-            if(i+p.length-1 == t.length-1) { break }
+            if(i+p.length == t.length) { break }
         }
         
         answer = count
