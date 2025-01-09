@@ -8,8 +8,8 @@ class Solution {
         for(i in queries.indices){
             s = queries[i][0]
             e = queries[i][1]
-            reversed = answer.substring(s, e+1).toCharArray().reversedArray().joinToString("")
-            answer = answer.replaceRange(s, e+1, reversed)
+            reversed = answer.substring(s..e).toCharArray().reversedArray().joinToString("")
+            answer = answer.replaceRange(s..e, reversed)
         }
         
         return answer
