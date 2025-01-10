@@ -1,5 +1,3 @@
 class Solution {
-    fun solution(intStrs: Array<String>, k: Int, s: Int, l: Int): IntArray = intStrs.filter{
-        it.substring(s..(s+l-1)).toInt() > k 
-    }.map{ it.substring(s..(s+l-1)).toInt() }.toIntArray()
+    fun solution(intStrs: Array<String>, k: Int, s: Int, l: Int): IntArray = intStrs.map{ it.substring(s..(s+l-1)).toInt() }.filter{ it > k }.toIntArray()
 }
